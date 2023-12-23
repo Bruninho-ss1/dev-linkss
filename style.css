@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;  /*62.5% = 10px */
+
+    --text-color: white;
+    --bg-url: url(img/bg-desktop\ \(1\).png);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.055);
+    --surface-color-houber: rgba(255, 255, 255, 0.2 );
+    --higthligh-color: rgba(0, 0, 0, 0.5);
+    --switch-bg-url: url(img/moo-stars.svg);
+
+}
+
+.light{
+    
+    --text-color: rgb(0, 0, 0); 
+    --bg-url: url(img/bg-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.055);
+    --surface-color-houber: rgba(0, 0, 0, 0.02 );
+    --higthligh-color: rgba(0, 0, 0, 0.2);
+    --switch-bg-url: url(img/son.svg);
+}
+    
+
+
+body{ 
+    overflow-y: hidden;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    background: var(--bg-url) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.4rem;
+}
+
+
+figure{
+    margin-top: 2.4rem;
+    text-align: center;
+}
+
+img{
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: .8rem;
+    clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
+}
+
+figcaption, a{
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#switch{
+    margin-top: 15px;
+    position: relative;
+    width: 64px;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white  var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    top: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+}
+
+#SocialLinks{
+    margin-top: 24px;
+}
+
+ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    padding: 1.6rem 9.4rem ;
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+
+ul li a:hover{
+    background: var(--surface-color-houber);
+    border: 1.5px solid var(--text-color);
+}
+
+
+/* SocialIconsLinks*/
+
+#SocialIconsLiks{
+    display: flex;
+    justify-content: center;
+
+    padding: 24px 0;
+
+    color: var(--text-color);
+}
+
+#SocialIconsLiks a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    font-size: 2.4rem; 
+    border-radius: 50%;
+    transition: background 0.5s;
+}
+
+#SocialIconsLiks a:hover{
+    background: var(--higthligh-color)
+}
+
+footer{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+
+
